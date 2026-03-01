@@ -2,6 +2,7 @@ import os
 from dotenv import load_dotenv
 from google import genai
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 #Load API key
 load_dotenv(dotenv_path=".env")
@@ -17,6 +18,7 @@ def generate(prompt):
 
 #Create Flask app
 app = Flask(__name__)
+CORS(app)
 
 #Route to handle POST requests
 @app.route('/generate', methods=['POST'])
