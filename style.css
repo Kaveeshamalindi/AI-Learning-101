@@ -1,0 +1,38 @@
+body {margin-top: 25px;}
+
+.container {
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    min-height: 90vh;
+    border: 5px solid #0c0035;
+    padding-top: 10px; 
+}
+
+h1 {
+    text-align: center;
+}
+
+.jumbotron {
+    text-align: center;
+}
+
+input[type="text"] {
+    font-size: 18px;     
+    padding: 8px;        
+    width: 60%;         
+}
+
+button {
+    font-size: 18px;     
+    padding: 8px 15px;        
+        
+}
+
+textarea {
+    font-size: 18px;   
+    width: 80%;        
+    height: 400px;     
+    padding: 10px;
+    resize: vertical;
+}
