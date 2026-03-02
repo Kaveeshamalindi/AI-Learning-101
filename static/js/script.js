@@ -7,7 +7,7 @@ async function buttonFunction(event) {
     textarea.value = `You: ${prompt}\n\nAI: ...`; 
 
     try {
-        const response = await fetch('http://127.0.0.1:5000/generate', {
+        const response = await fetch('https://ai-learning-101.vercel.app/generate', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ prompt: prompt })
