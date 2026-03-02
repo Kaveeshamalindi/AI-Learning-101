@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 from google import genai
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+from flask import render_template
 
 #Load API key
 load_dotenv(dotenv_path=".env")
@@ -29,6 +30,12 @@ def generate_route():
         return jsonify({'error': 'Prompt is required'}), 400
     result = generate(prompt)
     return jsonify({'result': result})
+
+#show index.html when someone opens the website
+@app.route('/')
+def home():
+    return render_template('index.html')
+
 
 # Run the app
 if __name__ == '__main__':
